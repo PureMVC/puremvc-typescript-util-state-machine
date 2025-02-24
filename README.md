@@ -75,7 +75,7 @@ Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-
 * An exiting notification is defined only for exiting the OPEN state to illustrate that entering and exiting notifications are optional.
 
 ## License
-* PureMVC Typescript Utility - State Machine - Copyright © Cliff Hall
+* PureMVC Typescript Utility - State Machine - Copyright © 2007-2025 Neil Manuell, Cliff Hall
 * PureMVC - Copyright © 2007-2025 Futurescale, Inc.
 * All rights reserved.
 

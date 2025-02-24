@@ -1,0 +1,11 @@
+PureMVC Typescript Utility - State Machine
+--------------------------------------------------------------------------
+Release Date: 2/24/25
+    Platform: Typescript
+     Version: 1 
+    Revision: 0
+     Authors: Neil Manuell <neil.manuell@puremvc.org>
+            : Cliff Hall <cliff.hall@puremvc.org>
+--------------------------------------------------------------------------
+
+1.0 Initial port from the AS3 source.
