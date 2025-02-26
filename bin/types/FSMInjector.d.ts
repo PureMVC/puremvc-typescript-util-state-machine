@@ -4,7 +4,7 @@ import { FSM, StateDef } from "./types";
 export declare class FSMInjector extends Notifier {
     private fsmConfig;
     private stateList;
-    constructor(fsmConfig: FSM);
+    constructor(multitonKey: string, fsmConfig: FSM);
     inject(): void;
     protected get states(): State[];
     protected createState(stateDef: StateDef): State;

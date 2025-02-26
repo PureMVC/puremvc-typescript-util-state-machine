@@ -9,12 +9,12 @@ class State {
         this.exiting = exiting || null;
         this.changed = changed || null;
     }
-    defineTrans(action, target) {
+    defineTransition(action, target) {
         if (this.getTarget(action) != null)
             return;
         this.transitions[action] = target;
     }
-    removeTrans(action) {
+    removeTransition(action) {
         this.transitions[action] = undefined;
     }
     getTarget(action) {

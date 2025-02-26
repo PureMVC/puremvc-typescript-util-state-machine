@@ -2,9 +2,10 @@ import { Notifier, } from "@puremvc/puremvc-typescript-multicore-framework";
 import { State } from "./State";
 import { StateMachine } from "./StateMachine";
 export class FSMInjector extends Notifier {
-    constructor(fsmConfig) {
+    constructor(multitonKey, fsmConfig) {
         super();
         this.stateList = null;
+        this.initializeNotifier(multitonKey);
         this.fsmConfig = fsmConfig;
     }
     inject() {
@@ -33,7 +34,7 @@ export class FSMInjector extends Notifier {
         const state = new State(name, entering, exiting, changed);
         const transitions = stateDef.transitions || [];
         for (const transDef of transitions) {
-            state.defineTrans(transDef.action, transDef.target);
+            state.defineTransition(transDef.action, transDef.target);
         }
         return state;
     }

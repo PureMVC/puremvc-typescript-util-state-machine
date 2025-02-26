@@ -4,14 +4,15 @@ import {
 } from "@puremvc/puremvc-typescript-multicore-framework";
 import { State } from "./State";
 import { StateMachine } from "./StateMachine";
-import { FSM, StateDef, Transition } from "./types";
+import { FSM, StateDef } from "./types";
 
 export class FSMInjector extends Notifier {
   private fsmConfig: FSM;
   private stateList: State[] | null = null;
 
-  constructor(fsmConfig: FSM) {
+  constructor(multitonKey:string, fsmConfig: FSM) {
     super();
+    this.initializeNotifier(multitonKey);
     this.fsmConfig = fsmConfig;
   }
 
@@ -46,7 +47,7 @@ export class FSMInjector extends Notifier {
 
     const transitions = stateDef.transitions || [];
     for (const transDef of transitions) {
-      state.defineTrans(transDef.action, transDef.target);
+      state.defineTransition(transDef.action, transDef.target);
     }
 
     return state;

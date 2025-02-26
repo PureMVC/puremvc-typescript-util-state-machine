@@ -17,12 +17,12 @@ export class State {
     this.changed = changed || null;
   }
 
-  public defineTrans(action: string, target: string): void {
+  public defineTransition(action: string, target: string): void {
     if (this.getTarget(action) != null) return;
     this.transitions[action] = target;
   }
 
-  public removeTrans(action: string): void {
+  public removeTransition(action: string): void {
     this.transitions[action] = undefined;
   }
 
