@@ -1,8 +1,5 @@
 'use strict';
 const PUREMVC = '../../node_modules/@puremvc/puremvc-typescript-multicore-framework';
-/*
-const Mediator = jest.createMockFromModule(PUREMVC);
-const Notifier = jest.createMockFromModule(PUREMVC)
-*/
-/*const puremvc = jest.requireActual(PUREMVC);*/
+
+// THIS IS THE MOST ABSURD THING I"VE EVER HAD TO DO TO MAKE A TEST SUITE WORK.
 module.exports = jest.requireActual(PUREMVC);
