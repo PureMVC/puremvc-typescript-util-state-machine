@@ -1,4 +1,5 @@
-import { FSMInjector, FSM  } from '../src';
+import { FSMInjector } from '../src';
+import {FSM, StateDef, Transition} from "../src";
 
 describe('FSMInjector', () => {
     test('should create an FSMInjector instance', () => {

@@ -1,3 +1,4 @@
+export type { FSM, StateDef, Transition } from "./types";
 export { StateMachine } from "./StateMachine";
-export { FSMInjector, FSM, StateDef, Transition } from "./FSMInjector";
+export { FSMInjector } from "./FSMInjector";
 export { State } from "./State";

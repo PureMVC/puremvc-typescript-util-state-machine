@@ -6,12 +6,16 @@
     "declaration": true,
     "declarationDir": "bin/types",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node","jest", "@puremvc/puremvc-typescript-multicore-framework"]
   },
   "include": ["src/**/*"],
   "exclude": ["docs", "node_modules", "bin", "test"],
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
     "out": "docs"
-  }
+  },
+  "typeRoots": [
+    "../node_modules/@types"
+  ]
 }

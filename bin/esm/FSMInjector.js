@@ -1,4 +1,4 @@
-import { Notifier, } from "@puremvc/puremvc-typescript-multicore-framework/";
+import { Notifier, } from "@puremvc/puremvc-typescript-multicore-framework";
 import { State } from "./State";
 import { StateMachine } from "./StateMachine";
 export class FSMInjector extends Notifier {

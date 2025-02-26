@@ -1,20 +1,6 @@
-import { Notifier } from "@puremvc/puremvc-typescript-multicore-framework/";
+import { Notifier } from "@puremvc/puremvc-typescript-multicore-framework";
 import { State } from "./State";
-export type Transition = {
-    action: string;
-    target: string;
-};
-export type StateDef = {
-    name: string;
-    entering?: string;
-    exiting?: string;
-    changed?: string;
-    transitions?: Transition[];
-};
-export type FSM = {
-    initial: string;
-    states: StateDef[];
-};
+import { FSM, StateDef } from "./types";
 export declare class FSMInjector extends Notifier {
     private fsmConfig;
     private stateList;

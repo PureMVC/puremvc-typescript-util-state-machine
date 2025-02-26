@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FSMInjector = void 0;
-const puremvc_typescript_multicore_framework_1 = require("@puremvc/puremvc-typescript-multicore-framework/");
+const puremvc_typescript_multicore_framework_1 = require("@puremvc/puremvc-typescript-multicore-framework");
 const State_1 = require("./State");
 const StateMachine_1 = require("./StateMachine");
 class FSMInjector extends puremvc_typescript_multicore_framework_1.Notifier {

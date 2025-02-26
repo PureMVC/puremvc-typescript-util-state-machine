@@ -1,27 +1,10 @@
 import {
   Notifier,
   IMediator,
-} from "@puremvc/puremvc-typescript-multicore-framework/"
+} from "@puremvc/puremvc-typescript-multicore-framework";
 import { State } from "./State";
 import { StateMachine } from "./StateMachine";
-
-export type Transition = {
-  action: string;
-  target: string;
-};
-
-export type StateDef = {
-  name: string;
-  entering?: string;
-  exiting?: string;
-  changed?: string;
-  transitions?: Transition[];
-};
-
-export type FSM = {
-  initial: string;
-  states: StateDef[];
-};
+import { FSM, StateDef, Transition } from "./types";
 
 export class FSMInjector extends Notifier {
   private fsmConfig: FSM;
