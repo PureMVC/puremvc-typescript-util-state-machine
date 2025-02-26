@@ -35,7 +35,19 @@
     "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "test": "jest"
+    "test": "jest --coverage"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -59,6 +71,7 @@
     "jest": "^29.7.0",
     "jest-config": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "nyc": "^17.1.0",
     "prettier": "^3.5.1",
     "ts-jest": "^29.2.5",
     "typedoc": "^0.27.8",
