@@ -10,25 +10,26 @@ export class FSMInjector extends Notifier {
   private fsmConfig: FSM;
   private stateList: State[] | null = null;
 
-  constructor(multitonKey:string, fsmConfig: FSM) {
+  constructor(multitonKey: string, fsmConfig: FSM) {
     super();
     this.initializeNotifier(multitonKey);
     this.fsmConfig = fsmConfig;
   }
 
-  public inject(): void {
+  public inject(): StateMachine {
     const stateMachine: StateMachine = new StateMachine();
-
+    stateMachine.initializeNotifier(this.multitonKey);
     for (const state of this.states) {
       stateMachine.registerState(state, this.isInitial(state.name));
     }
 
     // Register the StateMachine with the facade
     this.facade.registerMediator(stateMachine as IMediator);
+    return stateMachine;
   }
 
   protected get states(): State[] {
-    if (this.stateList == null) {
+    if (this.stateList === null) {
       this.stateList = [];
       for (const stateDef of this.fsmConfig.states) {
         const state: State = this.createState(stateDef);

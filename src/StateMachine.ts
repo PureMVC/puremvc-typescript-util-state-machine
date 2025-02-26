@@ -24,14 +24,18 @@ export class StateMachine extends Mediator {
   }
 
   public registerState(state: State, initial: boolean = false): void {
-    if (state == null || this.states[state.name] != null) return;
+    if (state === null || this.states[state.name] != null) return;
     this.states[state.name] = state;
     if (initial) this.initial = state;
   }
 
+  public getState(name: string): State | undefined {
+    return this.states[name];
+  }
+
   public removeState(stateName: string): void {
     const state: State = this.states[stateName];
-    if (state == null) return;
+    if (state === null) return;
     delete this.states[stateName];
   }
 
@@ -61,7 +65,7 @@ export class StateMachine extends Mediator {
     this.currentState = nextState;
 
     if (nextState.changed) {
-      if (this.currentState.changed != null) {
+      if (this.currentState.changed !== null) {
         this.sendNotification(this.currentState.changed, data);
       }
     }
@@ -94,9 +98,5 @@ export class StateMachine extends Mediator {
 
   get viewComponent(): State | null {
     return this.currentState;
-  }
-
-  set viewComponent(state: State) {
-    this.currentState = state;
   }
 }

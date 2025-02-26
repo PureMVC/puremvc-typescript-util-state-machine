@@ -18,12 +18,8 @@ export class State {
   }
 
   public defineTransition(action: string, target: string): void {
-    if (this.getTarget(action) != null) return;
+    if (this.getTarget(action) !== undefined) return;
     this.transitions[action] = target;
-  }
-
-  public removeTransition(action: string): void {
-    this.transitions[action] = undefined;
   }
 
   public getTarget(action: string | undefined): string | undefined {

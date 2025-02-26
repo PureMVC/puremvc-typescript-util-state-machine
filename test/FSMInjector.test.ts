@@ -1,5 +1,4 @@
-import { FSMInjector } from '../src';
-import {FSM} from "../src";
+import { FSMInjector, FSM, StateMachine} from '../src';
 
 const fsmConfig:FSM = {
     initial: "Closed",
@@ -32,9 +31,16 @@ const fsmConfig:FSM = {
                 {
                     action: "Unlock",
                     target: "Closed",
-                }
+                },
+                {
+                    action: "KickIn",
+                    target: "KickedIn",
+                },
             ]
-        }
+        },
+        {
+            name: "KickedIn"
+        },
     ]
 };
 
@@ -45,9 +51,9 @@ describe('FSMInjector', () => {
     });
 
     test('should inject a state machine from configuration', () => {
-        const fsmInjector = new FSMInjector("Test", fsmConfig);
-        fsmInjector.inject();
-        expect(fsmInjector).toBeInstanceOf(FSMInjector);
+        const fsmInjector = new FSMInjector("FSM_Unit_Tests", fsmConfig);
+        const stateMachine = fsmInjector.inject();
+        expect(stateMachine.name).toBe(StateMachine.NAME);
     });
 
 });
