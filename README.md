@@ -65,7 +65,6 @@ Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-
 >              ]
 >           }
 >        }
->  	</fsm>
 
 * The above FSM defines three discrete states OPENED, CLOSED and LOCKED. 
 * The actions OPEN, CLOSE and LOCK are used to trigger state transitions. 
