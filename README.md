@@ -1,5 +1,5 @@
 ## [PureMVC](http://puremvc.github.com/) [Typescript](https://github.com/PureMVC/puremvc-typescript-multicore-framework/wiki) Utility: State Machine
-This utility provides a simple yet effective Finite State Machine implementation, which allows the definition of discrete states, and the valid transitions to other states available from any given state, and the actions which trigger the transitions. A mechanism is provided for defining the entire state machine in XML and having a fully populated StateMachine injected into the PureMVC app.
+This utility provides a simple yet effective Finite State Machine implementation, which allows the definition of discrete states, and the valid transitions to other states available from any given state, and the actions which trigger the transitions. A mechanism is provided for defining the entire state machine in JSON and having a fully populated StateMachine injected into the PureMVC app.
 
 ## Status
 Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-statemachine/blob/master/VERSION)
@@ -22,9 +22,9 @@ Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-
 * Finally, when a transition is complete, the StateMachine sends a StateMachine.CHANGED Notification, with a reference to the new State. This is sent once any exiting notification for the previous state, as well as any entering notification for the new state have both been executed, and the current state of the StateMachine has been updated to the new state.
      
 ## FSM Injector
-  * Also included in this release is useful class that allows you to define your FSM in an XML format, and pass it to the FSMInjector where it will be parsed, and a fully populated StateMachine instance will be created and registered via your Facade. 
+  * Also included in this release is useful class that allows you to define your FSM in an JSON format, and pass it to the FSMInjector where it will be parsed, and a fully populated StateMachine instance will be created and registered via your Facade. 
 * The FSMInjector extends Notifier to give it a reference to the Facade for injecting the completed StateMachine.
-* The XML format for the FSM Injector is simple. For instance here is the FSM for a door:
+* The JSON format for the FSM Injector is simple. For instance here is the FSM for a door:
 
 >      { 
 >        initial: "CLOSED"
@@ -56,7 +56,7 @@ Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-
 >          {
 >              name: "LOCKED" 
 >              entering: "lockingNote" 
->              exiting="aboutToUnlockNote"
+>              exiting: "unlockingNote"
 >              transitions: [
 >                  { 
 >                    action: "UNLOCK" 
