@@ -1,5 +1,5 @@
 {
-  "name": "@puremvc/puremvc-typescript-util-statemachine",
+  "name": "@puremvc/puremvc-typescript-util-statem-achine",
   "version": "1.0.0",
   "description": "PureMVC State Machine Utility for TypeScript",
   "main": "./bin/cjs/index.js",

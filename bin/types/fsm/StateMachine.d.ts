@@ -14,10 +14,10 @@ export declare class StateMachine extends Mediator {
     constructor();
     onRegister(): void;
     registerState(state: State, initial?: boolean): void;
+    getState(name: string): State | undefined;
     removeState(stateName: string): void;
     protected transitionTo(nextState: State, data?: unknown): void;
     listNotificationInterests(): string[];
     handleNotification(note: INotification): void;
     get viewComponent(): State | null;
-    set viewComponent(state: State);
 }

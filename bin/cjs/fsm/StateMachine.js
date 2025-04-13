@@ -15,15 +15,18 @@ class StateMachine extends puremvc_typescript_multicore_framework_1.Mediator {
             this.transitionTo(this.initial, null);
     }
     registerState(state, initial = false) {
-        if (state == null || this.states[state.name] != null)
+        if (state === null || this.states[state.name] != null)
             return;
         this.states[state.name] = state;
         if (initial)
             this.initial = state;
     }
+    getState(name) {
+        return this.states[name];
+    }
     removeState(stateName) {
         const state = this.states[stateName];
-        if (state == null)
+        if (state === null)
             return;
         delete this.states[stateName];
     }
@@ -47,7 +50,7 @@ class StateMachine extends puremvc_typescript_multicore_framework_1.Mediator {
         }
         this.currentState = nextState;
         if (nextState.changed) {
-            if (this.currentState.changed != null) {
+            if (this.currentState.changed !== null) {
                 this.sendNotification(this.currentState.changed, data);
             }
         }
@@ -73,9 +76,6 @@ class StateMachine extends puremvc_typescript_multicore_framework_1.Mediator {
     }
     get viewComponent() {
         return this.currentState;
-    }
-    set viewComponent(state) {
-        this.currentState = state;
     }
 }
 exports.StateMachine = StateMachine;
