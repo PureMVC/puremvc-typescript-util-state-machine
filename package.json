@@ -26,16 +26,19 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run build:lib",
+    "test": "jest --coverage",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "format": "prettier --write ./src",
+    "npm:publish:dry-run": "npm publish --dry-run",
+    "npm:publish": "npm publish --access public",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
     "build:lib": "npm run build:cjs && npm run build:esm",
     "build:esm": "tsc --module esnext --outDir bin/esm && echo '{\"type\": \"module\"}' > bin/esm/package.json",
     "build:cjs": "tsc --module commonjs --outDir bin/cjs && echo '{\"type\": \"commonjs\"}' > bin/cjs/package.json",
     "build:doc": "typedoc",
-    "clean": "rm -rf bin",
-    "format": "prettier --write ./src",
-    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
-    "test": "jest --coverage"
+    "clean": "rm -rf bin"
+    
   },
   "nyc": {
     "extension": [
