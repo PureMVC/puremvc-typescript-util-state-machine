@@ -6,7 +6,6 @@ Release Date: 4/13/25
     Revision: 0
        Minor: 0
      Authors: Cliff Hall <cliff.hall@puremvc.org>
-            : Neil Manuell <neil.manuell@puremvc.org>
 --------------------------------------------------------------------------
 
 1.0.0 Initial port from the AS3 source.

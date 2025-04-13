@@ -4,6 +4,7 @@ This utility provides a simple yet effective Finite State Machine implementation
 ## Status
 Production - [Version 1.0.0](https://github.com/PureMVC/puremvc-typescript-util-statemachine/blob/master/VERSION)
 
+
 ## Platforms / Technologies
 * [Typescript](http://en.wikipedia.org/wiki/Typescript)
 
