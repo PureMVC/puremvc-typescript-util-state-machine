@@ -25,7 +25,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:lib",
+    "build": "npm run clean && npm run build:lib && npm run build:doc",
     "test": "jest --coverage",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
@@ -52,16 +52,29 @@
       "lcov"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PureMVC/puremvc-typescript-util-state-machine.git"
+  },
+  "homepage": "https://puremvc.org",
+  "bugs": {
+    "url": "https://github.com/PureMVC/puremvc-typescript-util-state-machine/issues"
+  },
+  "keywords": [
+    "puremvc",
+    "typescript",
+    "mvc",
+    "state machine"
+  ],
+  "author": "Cliff Hall cliff@futurescale.com",
+  "license": "BSD-3-Clause",
   "directories": {
     "doc": "docs",
     "test": "test",
     "bin": "bin"
   },
   "dependencies": {
-    "@puremvc/puremvc-typescript-multicore-framework": "2.0.5",
+    "@puremvc/puremvc-typescript-multicore-framework": "^2.1.1",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
