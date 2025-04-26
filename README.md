@@ -1,13 +1,19 @@
 ## [PureMVC](http://puremvc.github.com/) [Typescript](https://github.com/PureMVC/puremvc-typescript-multicore-framework) Utility: State Machine
 This utility provides a simple yet effective Finite State Machine implementation, which allows the definition of discrete states, and the valid transitions to other states available from any given state, and the actions which trigger the transitions. A mechanism is provided for defining the entire state machine in JSON and having a fully populated StateMachine injected into the PureMVC app.
 
-* [NPM Package](https://www.npmjs.com/package/@puremvc/puremvc-typescript-util-state-machine?activeTab=readme)
-
-## Status
-Production - [Version 1.0.1](https://github.com/PureMVC/puremvc-typescript-util-state-machine/blob/master/VERSION)
+## Installation
+```shell
+npm install @puremvc/puremvc-typescript-multicore-framework
+npm install @puremvc/puremvc-typescript-util-state-machine 
+```
 
 ## Platforms / Technologies
-* [Typescript](http://en.wikipedia.org/wiki/Typescript)
+* [Typescript](http://typescriptlang.org)
+* [PureMVC MultiCore](https://github.com/PureMVC/puremvc-typescript-multicore-framework)
+* [NPM](https://www.npmjs.com/package/@puremvc/puremvc-typescript-util-state-machine?activeTab=readme)
+
+## Ported Utility
+* This is a direct port of the original [AS3 StateMachine utility](https://github.com/PureMVC/puremvc-as3-util-statemachine)
 
 ## State Representation
 * The States held and navigated by the StateMachine are instances of a State class, which carries several critical pieces of information about that State. Each State has optional associated Notifications to be sent on entry into the State and exit from the State. 
@@ -76,7 +82,7 @@ Production - [Version 1.0.1](https://github.com/PureMVC/puremvc-typescript-util-
 * An exiting notification is defined only for exiting the OPEN state to illustrate that entering and exiting notifications are optional.
 
 ## License
-* PureMVC Typescript Utility - State Machine - Copyright © 2007-2025 Neil Manuell, Cliff Hall
+* PureMVC Typescript Utility - State Machine - Copyright © 2007-2025 Neil Manuell, [Cliff Hall](https://github.com/cliffhall)
 * PureMVC - Copyright © 2007-2025 Futurescale, Inc.
 * All rights reserved.
 
