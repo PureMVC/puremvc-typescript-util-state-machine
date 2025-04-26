@@ -1,6 +1,6 @@
 {
   "name": "@puremvc/puremvc-typescript-util-state-machine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PureMVC State Machine Utility for TypeScript",
   "main": "./bin/cjs/index.js",
   "module": "./bin/esm/index.js",
@@ -12,7 +12,7 @@
       },
       "require": {
         "types": "./bin/types/index.d.ts",
-        "default": "./bin/cjs/index.cjs"
+        "default": "./bin/cjs/index.js"
       }
     }
   },
@@ -74,7 +74,7 @@
     "bin": "bin"
   },
   "dependencies": {
-    "@puremvc/puremvc-typescript-multicore-framework": "^2.1.1",
+    "@puremvc/puremvc-typescript-multicore-framework": "^2.1.2",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
