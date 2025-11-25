@@ -1,6 +1,6 @@
 {
   "name": "@puremvc/puremvc-typescript-util-state-machine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PureMVC State Machine Utility for TypeScript",
   "main": "./bin/cjs/index.js",
   "module": "./bin/esm/index.js",
@@ -27,18 +27,18 @@
   "scripts": {
     "build": "npm run clean && npm run build:lib && npm run build:doc",
     "test": "jest --coverage",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
-    "format": "prettier --write ./src",
+    "lint": "eslint ./src ./test",
+    "lint:fix": "eslint ./src ./test --fix",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
+    "format:check": "prettier --check ./src ./test",
+    "format:fix": "prettier --write ./src ./test",
     "npm:publish:dry-run": "npm publish --dry-run",
     "npm:publish": "npm publish --access public",
-    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
     "build:lib": "npm run build:cjs && npm run build:esm",
     "build:esm": "tsc --module esnext --outDir bin/esm && echo '{\"type\": \"module\"}' > bin/esm/package.json && rm -rf bin/esm/interfaces",
     "build:cjs": "tsc --module commonjs --outDir bin/cjs && echo '{\"type\": \"commonjs\"}' > bin/cjs/package.json && rm -rf bin/cjs/interfaces",
     "build:doc": "typedoc",
     "clean": "rm -rf bin"
-    
   },
   "nyc": {
     "extension": [
