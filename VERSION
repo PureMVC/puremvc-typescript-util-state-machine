@@ -4,11 +4,11 @@ Release Date: 11/25/25
     Platform: Typescript
      Version: 1
     Revision: 0
-       Minor: 3
+       Minor: 4
      Authors: Cliff Hall <cliff.hall@puremvc.org>
 --------------------------------------------------------------------------
 
 1.0.0 Initial port from the AS3 source.
 1.0.1 NPM Package link
 1.0.2 Fix entry point in package.json
-1.0.3 Add github workflow file for build/publish
+1.0.3 - 1.0.4 Add github workflow for build/publish

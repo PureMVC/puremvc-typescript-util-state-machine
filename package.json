@@ -1,6 +1,6 @@
 {
   "name": "@puremvc/puremvc-typescript-util-state-machine",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PureMVC State Machine Utility for TypeScript",
   "main": "./bin/cjs/index.js",
   "module": "./bin/esm/index.js",
@@ -93,5 +93,8 @@
     "typedoc": "^0.27.8",
     "typescript-eslint": "^8.25.0",
     "zod": "^3.24.2"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
