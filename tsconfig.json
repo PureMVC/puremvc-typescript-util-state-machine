@@ -7,7 +7,9 @@
     "declarationDir": "bin/types",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["node","jest", "@puremvc/puremvc-typescript-multicore-framework"]
+    "types": ["node","jest", "@puremvc/puremvc-typescript-multicore-framework"],
+    "outDir": "bin/temp",
+    "rootDir": "src"
   },
   "include": ["src/**/*"],
   "exclude": ["docs", "node_modules", "bin", "test"],

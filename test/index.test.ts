@@ -1,4 +1,4 @@
-import * as index from "../src";
+import * as index from "../src/index.js";
 
 describe("Index Module", () => {
   test("should export expected components", () => {

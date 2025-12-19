@@ -2,7 +2,7 @@ import {
   Mediator,
   INotification,
 } from "@puremvc/puremvc-typescript-multicore-framework";
-import { State } from "./State";
+import { State } from "./State.js";
 
 export class StateMachine extends Mediator {
   public static NAME: string = "StateMachine";

@@ -2,9 +2,9 @@ import {
   Notifier,
   IMediator,
 } from "@puremvc/puremvc-typescript-multicore-framework";
-import { State } from "./State";
-import { StateMachine } from "./StateMachine";
-import { FSM, StateDef } from "../types";
+import { State } from "./State.js";
+import { StateMachine } from "./StateMachine.js";
+import { FSM, StateDef } from "../types.js";
 
 export class FSMInjector extends Notifier {
   private fsmConfig: FSM;

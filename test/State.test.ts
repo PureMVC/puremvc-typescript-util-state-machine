@@ -1,4 +1,4 @@
-import { State } from "../src";
+import { State } from "../src/index.js";
 
 describe("State", () => {
   test("should create a State instance with minimal constructor args", () => {

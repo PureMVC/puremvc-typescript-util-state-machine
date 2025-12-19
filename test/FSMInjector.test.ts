@@ -1,4 +1,4 @@
-import { FSMInjector, FSM, StateMachine } from "../src";
+import { FSMInjector, FSM, StateMachine } from "../src/index.js";
 
 const fsmConfig: FSM = {
   initial: "Closed",

@@ -1,4 +1,4 @@
-import { FSM, FSMInjector, State, StateMachine } from "../src";
+import { FSM, FSMInjector, State, StateMachine } from "../src/index.js";
 import { Notification } from "@puremvc/puremvc-typescript-multicore-framework";
 
 const fsmConfig: FSM = {
