@@ -1,6 +1,9 @@
 ## [PureMVC](http://puremvc.github.com/) [Typescript](https://github.com/PureMVC/puremvc-typescript-multicore-framework) Utility: State Machine
 This utility provides a simple yet effective Finite State Machine implementation, which allows the definition of discrete states, and the valid transitions to other states available from any given state, and the actions which trigger the transitions. A mechanism is provided for defining the entire state machine in JSON and having a fully populated StateMachine injected into the PureMVC app.
 
+## Dev Guide
+* [PureMVC TypeScript State Machine Utility — Developer Guide](DEV_GUIDE.md)
+
 ## Installation
 ```shell
 npm install @puremvc/puremvc-typescript-multicore-framework
